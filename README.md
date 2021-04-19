@@ -11,11 +11,11 @@
 根据个人一些粗浅的经验，想从下面几个方面来分享讨论，大数据领域相关的东西
 
 - [硬件](Hardware/README.md)
-- 组建版本选型
-- 构建
-- 安全认证套件
-- 集群管理
-- HDFS
-- 消息队列
-- 计算引擎
-- 数据仓库
+- [组建版本选型](VersionSelection/README.md)
+- [构建](Build/README.md)
+- [安全认证套件](Security/README.md)
+- [集群管理](Cluster/README.md)
+- [Hadoop](Hadoop/README.md)
+- [消息队列](MessageQueue/README.md)
+- [计算引擎](CalEngine/README.md)
+- [数据仓库](DataWarehouse/README.md)
