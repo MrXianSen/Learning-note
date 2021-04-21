@@ -10,6 +10,8 @@
 
 根据个人一些粗浅的经验，想从下面几个方面来分享讨论，大数据领域相关的东西
 
+- [架构](Archtecture/README.md)
+
 - [硬件](Hardware/README.md)
 - [组建版本选型](VersionSelection/README.md)
 - [构建](Build/README.md)
