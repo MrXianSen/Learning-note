@@ -36,4 +36,4 @@ master-slave的架构使用副本的方式实现高可靠，在集群中存在�
 
 集群模式实现了Redis的分布式存储，对数据进行分片
 
-![redis cluster](img/redis_cluster.png)
+![redis cluster](img/redis_cluster.png2)
