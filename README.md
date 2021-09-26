@@ -17,6 +17,8 @@
 
 #### 分布式系统
 
+>  CAP不可能三角
+
 ##### 可靠性
 
 数据可靠目前最经典的解决方案是：数据副本，在集群中复制多份数据存储在不同的节点中，由此也就衍生除了多种数据可靠性的架构
@@ -37,8 +39,81 @@
 
 ##### 可扩展性
 
+数据分区
+
+- 区间分区
+
+  [Bigtable](http://static.googleusercontent.com/media/research.google.com/en/us/archive/bigtable-osdi06.pdf)
+
+- 一致性Hash
+
+  Cassandra
+
 ##### 可维护性
+
+容错与恢复
 
 #### 存储引擎
 
+##### 事务
+
+- AICD模型
+- BASE模型
+
+##### 底层原理
+
+**数据结构与算法**
+
+- Hash表
+- B+树
+- LSMT
+- BloomFilter
+
+**组成原理**
+
+- 内存性能
+- 磁盘性能
+- 网络性能
+- CPU性能
+
+##### 存储和序列化
+
+- 序列化 
+
+  thrift
+
+  protobuf
+
+- 列式存储
+
+  orc
+
+  parquet
+
+- 压缩
+
+  snappy
+
+  lzo
+
+  lz4
+
+  zlib
+
+  zstd
+
 #### 计算引擎
+
+##### 批处理
+
+- MapReduce模型
+
+##### 流式处理
+
+- Storm
+- Spark/Flink
+
+##### 架构
+
+- lambda架构
+- Kappa架构
