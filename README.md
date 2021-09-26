@@ -6,18 +6,39 @@
 
 
 
-## 我的书写思路
+## 大数据领域理论基础
 
-根据个人一些粗浅的经验，想从下面几个方面来分享讨论，大数据领域相关的东西
+1. [100 open source Big Data architecture papers](https://www.linkedin.com/pulse/100-open-source-big-data-architecture-papers-anil-madan/)
+2. [GFS论文](http://static.googleusercontent.com/media/research.google.com/en/us/archive/gfs-sosp2003.pdf)：网上同时也有很多翻译
 
-- [架构](Archtecture/README.md)
+## 大数据领域知识地图
 
-- [硬件](Hardware/README.md)
-- [组建版本选型](VersionSelection/README.md)
-- [构建](Build/README.md)
-- [安全认证套件](Security/README.md)
-- [集群管理](Cluster/README.md)
-- [Hadoop](Hadoop/README.md)
-- [消息队列](MessageQueue/README.md)
-- [计算引擎](CalEngine/README.md)
-- [数据仓库](DataWarehouse/README.md)
+### 大数据技术
+
+#### 分布式系统
+
+##### 可靠性
+
+数据可靠目前最经典的解决方案是：数据副本，在集群中复制多份数据存储在不同的节点中，由此也就衍生除了多种数据可靠性的架构
+
+- 主从架构：典型代表有GFS/Bigtable
+
+  同步复制：Backup Master，
+
+  异步复制：Shadow Master，sharding节点只能用于读
+
+- 多主结构：Spanner
+
+  跨数据中心/全球数据库
+
+- 无主架构：Dynamo/Cassandra
+
+  最终一致性 AP架构
+
+##### 可扩展性
+
+##### 可维护性
+
+#### 存储引擎
+
+#### 计算引擎
