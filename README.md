@@ -65,8 +65,13 @@
 **数据结构与算法**
 
 - Hash表
+
 - B+树
-- LSMT
+
+- [LSMT](DataStructure/LSMT.md)
+
+  [论文地址](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.44.2782&rep=rep1&type=pdf)
+
 - BloomFilter
 
 **组成原理**
