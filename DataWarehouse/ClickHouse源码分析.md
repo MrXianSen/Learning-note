@@ -142,3 +142,30 @@ TODO
 
 源码路径：src/Interpreters/Contxt.cpp
 
+
+
+
+
+### DDL
+
+DDL SQL执行相关源码DDLWorker.cpp，源码路径src/Interpretors/DDLWorker.cpp
+
+```c++
+void DDLWorker::processTask(DDLTaskBase & task, const ZooKeeperPtr & zookeeper)
+{
+// Step 1: 在ZK的active/目录下面创建临时节点
+
+// Step 2: 执行DDL Task
+// Step 3: 执行完成之后在ZK中的finished/目录下面创建状态目录，并写入执行状态
+}
+```
+
+
+
+### ZooKeeper
+
+**clickhouse**
+
+- replcluster
+- rootcloudv4-qa???
+- tables

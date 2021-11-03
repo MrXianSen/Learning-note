@@ -23,7 +23,7 @@
 
 数据可靠目前最经典的解决方案是：数据副本，在集群中复制多份数据存储在不同的节点中，由此也就衍生除了多种数据可靠性的架构
 
-- 主从架构：典型代表有GFS/Bigtable
+- [主从架构：典型代表有GFS/Bigtable](cluster/MasterSlave.md)
 
   同步复制：Backup Master，
 

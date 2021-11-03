@@ -38,17 +38,62 @@ Clickhouse分布式集群中，通常先创建本地表，再创建分布式表�
 
 ## 数据存储
 
+### 文件结构
+
+clickhouse存储目录下一个数据列会存储一个文件
+
+数据存储目录：
+
+${home}/clickhouse/data/${db_name}/${table_name}/${partition}/
+
+- columnName.bin
+
+  列存文件数据
+
+- columnName.mrk2
+
+  每一列数据的列存数据标记
+
+- columnName.null.bin
+
+- columnName.null.mrk2
+
+  这两个文件分别是对应的列值为null的数据
+
+- checksum.txt
+
+  当前目录下各个目录的带下和各文件内存的Hash，用于完整性校验
+
+- count.txt
+
+  当前分区中数据条数
+
+- default_compression_codec.txt
+
+  数据文件的默认压缩算法
+
+- partition.dat
+
+  从分区列计算出分区值得方法
+
+- primary.idx
+
+  数据索引，其实是排序键的那一列每间隔index_granularity的值，如果有n列，那每间隔index_granularity就会有n个值，同时也会受index_granularity_bytes影响
+
+- ttl.txt
+
+  > ttl format version: 1
+  > {"table":{"min":1663141752,"max":1663143264}}
+
 ### 存储格式
 
 - wide
 
-  
+  按列存，每一列存储一个文件
 
 - compat
 
   所有数据回写入到一个文件，对于小批量数据写入更友好
-
-
 
 - 索引
 
